@@ -87,5 +87,5 @@ summarizeddt <- combineddt %>%
 # From the data set in step 4, creates a second, independent tidy 
 # data set with the average of each variable for each activity and each subject.
 # Write output of summarized data to file tidy_data.csv
-data.table::fwrite(summarizeddt, file="tidydata.csv",sep=",")
+data.table::fwrite(summarizeddt, file="tidydata.txt",sep=",")
 
