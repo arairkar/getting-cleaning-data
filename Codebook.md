@@ -2,7 +2,7 @@
 
 #Codebook to explain the data set for Coursera course - ‘Getting and Cleaning data’ course project
 
-# The final data set is extracted into a file named tidydata.csv which is a comma separated values file
+# The final data set is extracted into a file named tidydata.txt which is a comma separated values file
 
 #The following variables are extracted from the available raw data into tidydata.csv . 
 #Note the original data for the course project along with it’s readme file and explanation is available at
