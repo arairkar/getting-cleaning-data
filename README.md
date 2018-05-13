@@ -42,5 +42,5 @@ Good luck!
 # All data in subsequent columns is the average floating point data 
 # for each activity and subject  for each columnfrom the original data set. 
 
-# The final summary data set is then written to a csv file named "tidydata.csv" with the fwrite command. The tidy.data.csv output file is included in this commit
+# The final summary data set is then written to a csv file named "tidydata.txt" with the fwrite command. The tidy.data.txt output file is included in this commit
 
