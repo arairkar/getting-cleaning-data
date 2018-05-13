@@ -42,8 +42,10 @@ combineddt <- rbind(cbind(test_subject,test_y,test_x),cbind(train_subject,train_
 rm(test_subject,test_x,test_y,train_subject,train_y,train_x)
 
 # Get features list ad activities list for columnnames
-featuresdt <- data.table::fread("./UCI HAR Dataset/features.txt")
-activitiesdt <- data.table::fread("./UCI HAR Dataset/activity_labels.txt")
+featuresdt <- data.frame(data.table::fread("./UCI HAR Dataset/features.txt"))
+activitiesdt <- data.frame(data.table::fread("./UCI HAR Dataset/activity_labels.txt"))
+
+activitiesdt[,2]<- factor(activitiesdt[,2])
 
 #Give column names to all columns
 colnames(combineddt) <- c("Subject","Activity",unlist(featuresdt[,2]))
@@ -56,8 +58,10 @@ combineddt <- combineddt[,keepcols,with=FALSE]
 
 #Uses descriptive activity names to name the activities in the data set
 
-combineddt$Activity<- factor(combineddt$Activity,levels = activitiesdt[,1],labels = activitiesdt[, 2])
 
+combineddt$Activity <- factor(combineddt$Activity,
+                              levels = activitiesdt[,1],
+                              labels = activitiesdt[,2])
 # Appropriately labels the data set with descriptive variable names.
 
 combineddt$Subject = as.factor(combineddt$Subject)
@@ -83,5 +87,5 @@ summarizeddt <- combineddt %>%
 # From the data set in step 4, creates a second, independent tidy 
 # data set with the average of each variable for each activity and each subject.
 # Write output of summarized data to file tidy_data.csv
-data.table::fwrite(summarizeddt, file="tidy_data.csv",sep=",")
+data.table::fwrite(summarizeddt, file="tidydata.csv",sep=",")
 
