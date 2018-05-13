@@ -10,12 +10,17 @@
 
 #The following transformations were applied to the original data.
 #The test and training sets were merged into one data set.
-#The columns containing mean and std deviation were extracted along with the subject and activity columns
-#The Subject and Activity columns were renamed as such
-#The Activity numbers were relabeled from the activity description file “activity_labels.txt”
-# The entire dataset was grouped by Activity and subject number with a Mean of each column generaged for each grouped data set
-# Note : Only the mean and standard deviation columns are extracted from the original data set per course project instructions
-# All data in subsequent columns is the average floating point data for each activity and subject  for each columnfrom the original data set. 
+#The columns containing mean and std deviation were extracted along with the subject and activity columns.
+#The Subject and Activity columns were renamed as such.
+#The Activity numbers were relabeled from the activity description file “activity_labels.txt”.
+# The entire dataset was grouped by Activity and subject number 
+# with a Mean of each column generaged for each grouped data set.
+
+# Note : Only the mean and standard deviation columns are extracted
+# from the original data set per course project instructions
+
+# All data in subsequent columns is the average floating point data 
+# for each activity and subject  for each columnfrom the original data set. 
 
 
 #Explanations of columns
@@ -60,3 +65,37 @@
 # timeDomainBodyGyroscopeStdDevX
 # timeDomainBodyGyroscopeStdDevY
 # timeDomainBodyGyroscopeStdDevZ
+
+
+#### Body Gyroscope Jerk mean and stardard deviations in X,Y,Z directions in time domain
+# timeDomainBodyGyroscopeJerkMeanX
+# timeDomainBodyGyroscopeJerkMeanY
+# timeDomainBodyGyroscopeJerkMeanZ
+# timeDomainBodyGyroscopeJerkStdDevX
+# timeDomainBodyGyroscopeJerkStdDevY
+# timeDomainBodyGyroscopeJerkStdDevZ
+
+######Body Accelerometer Magnitude Mean and Standard deviations in time domain
+# timeDomainBodyAccelerometerMagnitudeMean
+# timeDomainBodyAccelerometerMagnitudeStdDev
+
+####Gravity Accelerometer Magnitude Mean and standard deviations in time domain
+# timeDomainGravityAccelerometerMagnitudeMean
+# timeDomainGravityAccelerometerMagnitudeStdDev
+
+####Body Acceleromter jerk magnitude mean and standard deviation measurements in time domain
+# timeDomainBodyAccelerometerJerkMagnitudeMean
+# timeDomainBodyAccelerometerJerkMagnitudeStdDev
+
+
+####Body Gyroscope Magnitude mean and standard deviations in time domain
+# timeDomainBodyGyroscopeMagnitudeMean
+# timeDomainBodyGyroscopeMagnitudeStdDev
+
+#####Body Gyroscope Jerk Magnitude mean and standard deviations in time domain
+# timeDomainBodyGyroscopeJerkMagnitudeMean
+# timeDomainBodyGyroscopeJerkMagnitudeStdDev
+
+
+#####Repeat of all above measurements in frequency domain instead of time domain (the FFT's of the time measurements)
+
